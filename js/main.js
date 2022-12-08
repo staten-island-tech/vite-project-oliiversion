@@ -8,28 +8,36 @@ switch (d.getDay()) {
     break;
 }
 
-const menuDiv = document.querySelector("#menu");
-display(menu);
+const thingsDiv = document.querySelector("#things");
+display(things);
 
 document.querySelector("#all").addEventListener("click", function () {
-  menuDiv.innerHTML = "";
-  display(menu);
+  thingsDiv.innerHTML = "";
+  display(things);
 });
-document.querySelector("#beef").addEventListener("click", function () {
-  menuDiv.innerHTML = "";
-  const filtered = menu.filter((item) => item.meat === "beef");
+document.querySelector(specificthing).addEventListener("click", function () {
+  thingsDiv.innerHTML = "";
+  const filtered = things.filter(
+    (item) => item.specificthing === "specificthing"
+  );
   display(filtered);
 });
-document.querySelector("#pescatarian").addEventListener("click", function () {
-  menuDiv.innerHTML = "";
-  const filtered = menu.filter((item) => item.meat === "fish");
-  display(filtered);
-});
-document.querySelector("#vegetarian").addEventListener("click", function () {
-  menuDiv.innerHTML = "";
-  const filtered = menu.filter((item) => item.meat === "none");
-  display(filtered);
-});
+document
+  .querySelector("#specific2thing")
+  .addEventListener("click", function () {
+    thingsDiv.innerHTML = "";
+    const filtered = things.filter(
+      (item) => item.specific2thing === "specific2thing"
+    );
+    display(filtered);
+  });
+document
+  .querySelector("#specific3thing")
+  .addEventListener("click", function () {
+    thingsDiv.innerHTML = "";
+    const filtered = things.filter((item) => item.specific3thing === "none");
+    display(filtered);
+  });
 
 document.querySelector("#theme-button").addEventListener("click", function () {
   if (document.body.classList.contains("light")) {
