@@ -1,69 +1,51 @@
-import { menu } from "";
-const d = new Date();
-var day = "";
+import "/styles/style.css";
+import { Data } from "./js/second.js";
+console.log(Data);
 
-switch (d.getDay()) {
-  case 0:
-    day = "monday";
-    break;
-}
 
-const thingsDiv = document.querySelector("#things");
-display(things);
+Data.forEach(Data => {
+    document.getElementById("products").insertAdjacentHTML
+        ("beforetheend",
+            `
+      <div id="productBox">
+      <h2>${Data.name}</h2>
+      <p><img src=${Data.imgURL}></p>
+      <p>Type: ${Data.type}</p>
+      <p>Price: ${Data.price}</p>
+    `
+        )
+});
+
+const menuDiv = document.querySelector("#menu")
+display(menu)
 
 document.querySelector("#all").addEventListener("click", function () {
-  thingsDiv.innerHTML = "";
-  display(things);
+    menuDiv.innerHTML = ''
+    display(menu)
 });
-document.querySelector(specificthing).addEventListener("click", function () {
-  thingsDiv.innerHTML = "";
-  const filtered = things.filter(
-    (item) => item.specificthing === "specificthing"
-  );
-  display(filtered);
-});
-document
-  .querySelector("#specific2thing")
-  .addEventListener("click", function () {
-    thingsDiv.innerHTML = "";
-    const filtered = things.filter(
-      (item) => item.specific2thing === "specific2thing"
-    );
-    display(filtered);
-  });
-document
-  .querySelector("#specific3thing")
-  .addEventListener("click", function () {
-    thingsDiv.innerHTML = "";
-    const filtered = things.filter((item) => item.specific3thing === "none");
-    display(filtered);
-  });
-
-document.querySelector("#theme-button").addEventListener("click", function () {
-  if (document.body.classList.contains("light")) {
-    document.body.classList = ["dark"];
-  } else {
-    document.body.classList = ["light"];
-  }
+document.querySelector("#thing").addEventListener("click", function () {
+    menuDiv.innerHTML = ''
+    const filtered = menu.filter(item => item.thing === "specific thing");
+    display(filtered)
 });
 
 function display(array) {
-  console.log(day);
-  const withSales = array.map(sale);
-  withSales.forEach((item) => {
-    menuDiv.insertAdjacentHTML(
-      "beforeend",
-      `<div class="menu-object">
+    console.log()
+    const withSales = array.map(sale)
+    withSales.forEach(item => {
+        menuDiv.insertAdjacentHTML (
+            "beforetheend",
+            `<div class="">
                 <h2>${item.name}</h2>
                 <img class="menu-image" src="${item.image}">
                 <p class="menu-object-price">$${item.price}</p>
                 <p class="menu-object-text">${item.description}</p>
             </div>`
-    );
-  });
+        )
+    })
 }
 
 function sale(item) {
-  if (item.sales.includes(day)) item.price = item.price / 2;
-  return item;
+    if (item.sales.includes(day)) item.price = item.price/2
+    return item
 }
