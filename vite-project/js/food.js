@@ -1,0 +1,88 @@
+const foodoptions = [
+  {
+    name: "Beef Steak",
+    vegetarian: "no",
+    calories: 608,
+    part: "meat",
+    img: "",
+  },
+  {
+    name: "Chicken (cup)",
+    vegetarian: "no",
+    calories: 335,
+    part: "meat",
+    img: "",
+  },
+  {
+    name: "Tofu (cup)",
+    vegetarian: "yes",
+    calories: 149,
+    part: "meat",
+    img: "",
+  },
+  {
+    name: "Bacon Slice",
+    vegetarian: "no",
+    calories: 43,
+    part: "meat",
+    img: "",
+  },
+  {
+    name: "Veggie Platter",
+    vegetarian: "yes",
+    calories: 70,
+    part: "vegetables",
+    img: "",
+  },
+  {
+    name: "Fruit-Roll Ups",
+    vegetarian: "yes",
+    calories: 50,
+    part: "snacks",
+    img: "",
+  },
+  {
+    name: "Lay's Potato Chips",
+    vegetarian: "yes",
+    calories: 152,
+    part: "snacks",
+    img: "",
+  },
+  {
+    name: "Doritos",
+    vegetarian: "no",
+    calories: 150,
+    part: "snacks",
+    img: "",
+  },
+  {
+    name: "Welch's Fruit Gummies",
+    vegetarian: "no",
+    calories: 78,
+    part: "snacks",
+    img: "",
+  },
+  {
+    name: "Celery",
+    vegetarian: "yes",
+    calories: 3,
+    part: "vegetables",
+    img: "",
+  },
+  {
+    name: "Tomato",
+    vegetarian: "yes",
+    calories: 8,
+    part: "vegetables",
+    img: "",
+  },
+  {
+    name: "Avocado",
+    vegetarian: "yes",
+    calories: 100,
+    part: "vegetables",
+    img: "",
+  },
+];
+
+export { foodoptions };
