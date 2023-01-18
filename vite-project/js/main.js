@@ -3,7 +3,7 @@ import AOS from "aos";
 import { foodoptions } from "./food";
 import { DOMSelectors } from "./dom";
 document.querySelector("#titlecard").innerHTML = `
-<h1 class=title>Shopping!</h1>`;
+<h1 class=title>I fixed this trust!</h1>`;
 
 foodoptions.forEach((el) => {
   DOMSelectors.box.insertAdjacentHTML(
