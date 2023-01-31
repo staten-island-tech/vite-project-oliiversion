@@ -4,7 +4,7 @@ const foodoptions = [
     vegetarian: "no",
     calories: 608,
     part: "meat",
-    img: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkgMiavMCOOUC4F4R3sQcoDOAYE7TgzlOpw2f_9EAYdQ&s",
   },
   {
     name: "Chicken (cup)",
